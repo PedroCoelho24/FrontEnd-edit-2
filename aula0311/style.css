@@ -1,0 +1,25 @@
+/*@mixin flex($wrap-nowrap, $justify-content, $row-or-column: row) {
+    display: flex;
+    flex-direction: $row-or-column;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
+}
+
+.trial_text_wrapper {
+    @include flex(center, space-between, column);
+}*/
+.trial_text_1 {
+  font-size: 20px;
+  color: #FF0000;
+}
+
+.trial_text_2 {
+  font-size: 40px;
+  color: #FF0000;
+}
+
+.trial_text_3 {
+  font-size: 60px;
+  color: #FF0000;
+}
+/*# sourceMappingURL=style.css.map */

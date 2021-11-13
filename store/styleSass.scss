@@ -1,0 +1,24 @@
+@mixin flex($display, $direction, $wrap-nowrap, $justify) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap-nowrap;
+    justify-content: $justify;
+}
+
+@mixin textDef($size, $color, $family, $opacity, $font-weight)
+{
+    font-family: $family;
+    font-size: $size;
+    color: $color; 
+    opacity: $opacity;
+    font-weight: $font-weight;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.side_column {
+    @include flex(fixed, column, center, space-between);
+    
+}

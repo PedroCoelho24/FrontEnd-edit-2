@@ -1,0 +1,19 @@
+$text-color: #FF0000;
+
+/*@mixin flex($wrap-nowrap, $justify-content, $row-or-column: row) {
+    display: flex;
+    flex-direction: $row-or-column;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
+}
+
+.trial_text_wrapper {
+    @include flex(center, space-between, column);
+}*/
+
+@for $i from 1 to 4 {
+    .trial_text_#{$i} {
+        font-size: #{$i * 20px};
+        color: $text-color;
+    }
+}

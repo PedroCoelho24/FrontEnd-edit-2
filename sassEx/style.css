@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 40px 40px;
+  background-color: #F2F5FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+}
+
+.status {
+  background-color: #E5EAFC;
+  width: 125px;
+  height: 70px;
+  border-radius: 70px;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #2E3A59;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.status_active {
+  background-color: #FFFFFF;
+  font-weight: 600;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-size: 46px;
+  color: #2E3A59;
+  opacity: 1;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-size: 23px;
+  color: #2E3A59;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.introText {
+  margin-bottom: 52px;
+}
+
+.status_wrapper {
+  margin-bottom: 24px;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project_card {
+  margin-bottom: 87px;
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#963CF5), to(#4346F8));
+  background: linear-gradient(to bottom right, #963CF5, #4346F8);
+  border-radius: 20px;
+}
+
+.project_card_content {
+  padding: 37px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project_card_content_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_card_content_header_icon {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_card_content_header_icon_image {
+  height: 37px;
+  width: 37px;
+}
+
+.project_card_content_header_tag {
+  font-family: "Poppins";
+  font-size: 22px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.project_card_content_body_title {
+  font-family: "Poppins";
+  font-size: 33px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.project_card_content_footer_date {
+  font-family: "Poppins";
+  font-size: 20px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-weight: 300;
+}
+
+.progress_area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 0 80px 0;
+}
+
+.progress_area_title {
+  margin-bottom: 37px;
+}
+
+.progress_area_cards_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.progress_area_card {
+  height: 122px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+}
+
+.progress_area_card_icon {
+  padding: 6px;
+  margin: 8px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#963CF5), to(#4346F8));
+  background: linear-gradient(to bottom right, #963CF5, #4346F8);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.progress_area_card_icon_image {
+  width: 28px;
+}
+
+.progress_area_card_information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+}
+
+.progress_area_card_information_title {
+  font-family: "Poppins";
+  font-size: 22;
+  color: #242736;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.progress_area_card_information_days {
+  font-family: "Poppins";
+  font-size: 16;
+  color: #AEAEB3;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.footer_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  height: 80px;
+  padding: 0 40px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #E5E5E5;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_buttons img {
+  height: 20px;
+}
+/*# sourceMappingURL=style.css.map */

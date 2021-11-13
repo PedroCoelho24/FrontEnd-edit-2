@@ -1,0 +1,189 @@
+// @use 'colors' as d;
+@import 'colors';
+@import'fonts';
+
+$size: 8px;
+$padding-between-elements: 10px;
+$text-font: "Poppins";
+$nav: 80px;
+
+
+
+@mixin flex($direction, $wrap-nowrap, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap-nowrap;
+    justify-content: $justify;
+}
+
+@mixin textDef($size, $color, $family, $opacity, $font-weight)
+{
+    font-family: $family;
+    font-size: $size;
+    color: $color; 
+    opacity: $opacity;
+    font-weight: $font-weight;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ 
+
+body { 
+    padding: #{$size * 5} #{$size * 5};
+    background-color: $backgroundColor;
+    @include flex(column, wrap, space-between);
+}
+
+button {
+    background-color: rgba(#ffffff, 0.0);
+    border: 0;
+}
+
+.status {
+    background-color: $button-background-color;
+    width: 125px;
+    height: 70px;
+    border-radius: 70px;
+    @include textDef(16px, $text-header1-color, $text-font, 1, $font-weight-normal);
+    &_active {
+        background-color: $button-selected-background-color;
+        font-weight: $font-weight-title;
+    }
+}
+
+
+
+nav {
+    @include flex(row, wrap, space-between);
+    margin-bottom: 55px;
+}
+
+h1 {
+    @include textDef(46px, $text-header1-color, $text-font, 1, $font-weight-title);
+}
+
+h2 {
+    @include textDef(23px, $text-header1-color, $text-font, 0.5, $font-weight-normal);
+}
+
+.introText {
+    margin-bottom: 52px;
+}
+
+.status_wrapper {
+    margin-bottom: #{$size * 3};
+    max-width: 600px;
+    @include flex (row, wrap, space-between)
+
+}
+
+.project_card {
+    margin-bottom: 87px;
+    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(to bottom right, #963CF5, #4346F8);
+    border-radius: 20px;
+    &_content {
+        padding: 37px;
+        box-sizing: border-box;
+        height: 100%;
+        @include flex(column, wrap, space-between);
+        &_header {
+            @include flex(row, wrap, flex-start);
+            align-items: center; 
+            &_icon {
+                height: 50px;
+                width: 50px;
+                background-color: rgba(#ffffff, 0.2);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                &_image {
+                    height: 37px;
+                    width: 37px;             
+                }
+            }
+            &_tag {
+                @include textDef(22px, $card-text-color, $text-font, 1, $font-weight-normal);
+            }
+        }
+        &_body {
+            &_title {
+                @include textDef(33px, $card-text-color, $text-font, 1, $font-weight-title);
+            }
+        }
+        &_footer {
+            &_date
+            {
+                @include textDef(20px, $card-text-color, $text-font, 1, $font-weight-subtitle);
+            }
+        }
+    }
+}
+
+.progress_area {
+    width: 100%;
+    @include flex(column, wrap, space-between);
+    margin: 0 auto;
+    padding: 0 0 #{$nav} 0;
+    &_title {
+        margin-bottom: 37px;
+    }
+    &_cards_wrapper {
+        @include flex(column, wrap, space-between);
+    }
+    &_card {
+        height: 122px;
+        width: 100%;
+        max-width: 600px;
+        background-color: $progress-card-background-color;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        @include flex(row, wrap, start);
+        align-items: center;
+        padding: 12px;
+        &_icon {
+            padding: 6px;
+            margin: 8px;
+            background: linear-gradient(to bottom right, #963CF5, #4346F8);
+            border-radius: 10px;
+            @include flex(row, wrap, center);
+            &_image {
+                width: 28px;
+            }
+        }
+        &_information {
+            @include flex(column, wrap, center);
+            margin-right: auto;
+            &_title {
+                @include textDef(22, $text-button-color, $text-font, 1, $font-weight-title);
+            }
+            &_days {
+                @include textDef(16, #AEAEB3, $text-font, 1, $font-weight-normal);
+            }
+        }
+    }
+}
+
+.footer_buttons {
+    @include flex(row, wrap, space-between);
+    position: fixed;
+    height: $nav;
+    padding: 0 40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #E5E5E5;
+    display: flex;
+    align-items: center;
+    img {
+        height: 20px;
+    }
+}
+
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- style para outro ficheiro -->
+    <style>
+        :root {
+            --rotation: 45deg;
+            --round_corners: 20px;
+            --pink_color: #cc33cc;
+            --black_square_color: #000000;
+            --white_square_color: #ffffff;
+            --chess_square: 20px;
+
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #f69898;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: calc(50% - 10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 400px;
+            border: 1px solid #d38080;
+            margin: 4px;
+            flex-direction: column;
+        }
+
+
+    
+        .box {
+            width: 120px;
+            height: 120px;
+            background: beige;
+        }
+
+        .perspective-square {
+            transform: rotateX(var(--rotation)) rotateZ(var(--rotation));
+            border-radius: var(--round_corners);
+        }
+
+        .rotate-square {
+            transition: all 2s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+            /* transform: rotateZ(360deg); */
+       
+        }
+
+
+        .rotate-square:hover {
+            animation-name: rotating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotating {
+            /*0% {
+                transform: rotate(45deg)
+            }
+
+            10% {
+                transform: rotate(-45deg)
+            }*/
+
+            33% {
+                transform: rotate(var(--rotation))
+            }
+
+            66% {
+                transform: rotate(calc((-1)*var(--rotation)))
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+
+        }
+
+        .z-squares {
+            transform: skewY(calc(var(--rotation)/2));
+        }
+
+        .mini-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+
+        .hole {
+            width: 30px;
+            height: 30px;
+            background: beige;
+            border-radius: 100%;
+            margin: 8px;
+        }
+
+        .even_odd .hole:nth-child(odd) {
+            background-color: var(--pink_color);
+        }
+
+        .forth_circle .hole:nth-child(4){
+            background-color: var(--pink_color);
+        }
+
+        .first_to_fifth .hole:nth-child(-n+5) {
+            background-color: var(--pink_color);
+        }
+
+        .last_circle .hole:nth-last-child(1)
+        {
+            background-color: var(--pink_color);
+        }
+
+
+        .board {
+            background-color: #ffffff;
+            height: calc(10*var(--chess_square));
+            width: calc(10*var(--chess_square));
+            display: flex;
+            /*flex-direction: row-reverse;*/
+
+        }
+
+        .board:hover {
+            transform: rotate3d(1, 2, -1, 172deg);
+            
+        }
+
+        .face {
+            display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin: var(--chess_square);
+    outline: #000000 solid 1px;
+        }
+
+        .square {
+            position: relative;
+            height: var(--chess_square);
+            width: var(--chess_square);
+        }
+
+        .square-white {
+            background-color: var(--white_square_color);
+            
+
+        }
+        .square-black {
+            background-color: var(--black_square_color);
+           
+        }
+
+
+
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <div class="box perspective-square"></div>
+        </section>
+
+        <section class="container">
+            <div class="box z-squares"></div>
+        </section>
+
+        <section class="container">
+            <div class="box rotate-square"></div>
+        </section>
+
+
+        <div class="container">
+            <p>Muda o background para #cc33cc - Bola sim, bola não</p>
+            <div class="mini-boxes even_odd">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Muda o background da 4ª bola para #cc33cc</p>
+            <div class="mini-boxes forth_circle">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Muda o background da 1ª até à 5ª bola para #cc33cc</p>
+            <div class="mini-boxes first_to_fifth">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Muda o background do último elemento para #cc33cc</p>
+            <div class="mini-boxes last_circle">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="board">
+                <div class="face front">
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+        
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+        
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+        
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+        
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+        
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+        
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+        
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                    <div class="square square-black"></div>
+                    <div class="square square-white"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
