@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
+.gridrowfull {
+  width: 100%;
+}
+
+html {
+  color: #FFF;
+  background-color: #121212;
+  font-weight: 300;
+  line-height: 1.618;
+  font-size: 13.33333px;
+}
+
+@media (min-width: 750px) {
+  html {
+    font-size: 14.33333px;
+  }
+}
+
+@media (min-width: 960px) {
+  html {
+    font-size: 15.33333px;
+  }
+}
+
+.gridrow {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+  .gridrow {
+    width: calc(90% - 20px);
+  }
+}
+
+@media (min-width: 960px) {
+  .gridrow {
+    width: 920px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gridrow {
+    width: 1340px;
+  }
+}
+
+html {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+body .home {
+  background-image: url("./assets/images/as1orb74 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body .contactPage {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.burger {
+  height: 2px;
+  width: 10px;
+  background-color: red;
+  margin: 2px;
+}
+
+input[type="checkbox"]:checked ~ nav .burger1 {
+  -webkit-transform: rotate(45deg) translateY(3px);
+          transform: rotate(45deg) translateY(3px);
+  width: 15px;
+}
+
+input[type="checkbox"]:checked ~ nav .burger2 {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ nav .burger3 {
+  -webkit-transform: rotate(-45deg) translateY(-3px);
+          transform: rotate(-45deg) translateY(-3px);
+  width: 15px;
+}
+
+input[type="checkbox"]:checked ~ nav .menu {
+  top: 0;
+  left: 0;
+}
+
+input[type="checkbox"]:checked ~ nav .buttonPosition {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  margin: 0 auto;
+}
+
+header {
+  padding: 30px 0;
+  background-color: rgba(35, 35, 35, 0.6);
+  position: fixed;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+}
+
+.gridrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.textright {
+  text-align: right;
+}
+
+.homePage {
+  padding: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.contactPageBody {
+  padding: 84px;
+}
+
+p {
+  color: red;
+}
+
+.myStuff {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: none;
+  text-decoration: none;
+}
+
+.introText {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: none;
+  text-decoration: none;
+}
+
+.menu {
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #232323;
+  color: white;
+  top: -100vh;
+  left: 0;
+}
+
+.menu p {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: none;
+  text-decoration: none;
+  padding: 30px;
+}
+
+.contactPage {
+  background-color: black;
+}
+
+.col-m-1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 25%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.col-m-2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.col-m-3 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 75%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.col-m-4 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  .col-t-1 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 16.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-t-2 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 33.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-t-3 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-t-4 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 66.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-t-5 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 83.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-t-6 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .col-d-1 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 16.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-d-2 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 33.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-d-3 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-d-4 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 66.66667%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-d-5 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 83.33333%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .col-d-6 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

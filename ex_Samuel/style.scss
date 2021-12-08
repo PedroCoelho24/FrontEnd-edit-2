@@ -1,0 +1,185 @@
+@import './assets/sizeVariables';
+@import './assets/fontVariables';
+@import './assets/grid';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+
+
+
+@mixin createClass ($gridColumns, $size, $gridGutter, $backgroundColor) {
+    @for $i from 1 through $gridColumns {
+        .col#{$size}-#{$i} {
+            box-sizing: border-box;
+            width: percentage($i/$gridColumns);
+            padding-left: $gridGutter / 2;
+            padding-right: $gridGutter / 2;
+           
+        } 
+    }  
+}
+
+@mixin flexDisplays ($display, $flex, $justify)
+{
+    display: $display;
+    flex-wrap: $flex;
+    justify-content: $justify;
+}
+
+@mixin fontInformation($size, $style, $weight, $height, $spacing, $align, $decoration)
+{
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    text-align: $align;
+    text-decoration: $decoration;  
+}
+
+html {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    .home {
+        
+        background-image: url("./assets/images/as1orb74 1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+    }
+
+    .contactPage {
+        background-color: black;
+    }
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.burger {
+    height: 2px;
+    width: 10px;
+    background-color: red;
+    margin: 2px;
+}
+
+input[type="checkbox"]:checked ~ nav{
+   
+    .burger1 {
+        transform: rotate(45deg) translateY(3px);
+        width: 15px;
+        
+    }
+    .burger2 {
+        display: none;
+    }.burger3 {
+        transform: rotate(-45deg) translateY(-3px);
+        width: 15px;
+    }
+    .menu {
+        top: 0;
+        left: 0;
+    }
+
+    .buttonPosition {
+        transform: translateY($gridgutter * 3);
+        margin: 0 auto;
+    }
+
+    
+    
+    
+}
+
+header {
+    padding: $gridgutter * 1.5 0 ;
+    background-color: rgba(35, 35, 35, 0.6);
+    position: fixed;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.gridrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textright {
+    text-align: right;
+
+}
+
+.homePage {
+    padding: $gridgutter * 1.5;
+  
+    align-self: flex-end;
+    
+}
+
+.contactPageBody {
+    padding: $gridgutter * 3 + 24px;
+}
+
+p {
+    color: red;
+}
+.myStuff {
+    @include fontInformation(16px, normal, 700, 21px, 0em, none, none)
+}
+
+.introText {
+    @include fontInformation(24px, normal, 300, 21px, 0em, none, none)
+}
+
+.menu {
+    transition: top 1s ease;
+    z-index: -1;
+    position: absolute; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: rgb(35, 35, 35); 
+    color: white; 
+    top: -100vh;
+    left: 0;
+    //margin: 0 auto;
+    
+
+    p {
+        @include fontInformation(36px, normal, 700, 42px, 0em, none, none);
+        padding: $gridgutter * 1.5;
+        
+        
+    }
+}
+
+.contactPage {
+    background-color: black;
+}
+
+
+
+@include createClass(4, '-m', 20px, red);
+
+
+@media screen and (min-width: $tablet)
+{
+    @include createClass(6, -t, 20px, blue);
+}
+
+@media screen and (min-width: $desktop)
+{
+    @include createClass(6, -d, 20px, green);
+}
+input[type="checkbox"]{
+    display: none;
+}
